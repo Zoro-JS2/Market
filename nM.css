@@ -1,0 +1,35 @@
+body{
+    background-color: white;
+    width: 100% auto;
+    height: 1200px;
+    transition: 1.2s;
+}
+header{
+    width: 100% auto;
+    height: 200px;
+    background-color: rgb(99, 97, 97);
+}
+#mode{
+    color: white;
+    background: rgb(0, 0, 0);
+    width: 100px;
+    height: 40px;
+    margin-right: 5%;
+    position: relative;
+    float: right;
+    border-radius: 10px;
+    transition: 1.2s;
+}
+#mode:hover{
+    transform: scale(1.2);
+    
+}
+body.dark{
+    background-color: black;
+    transition: 1.2s;
+}
+
+body.wight{
+    background-color: white;
+    transition: 1.2s;
+}

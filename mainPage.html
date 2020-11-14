@@ -1,0 +1,201 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="icofont/icofont.min.css">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+<link rel="stylesheet" href="main.css">
+    <title>Delivery For You</title>
+  </head>
+  <body>
+    <!-- Optional JavaScript -->
+    <!--Карусель-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <!--Карусель-->
+
+
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="main.js"></script>
+<header>
+    <div class="logo">
+     <a href="mainPage.html"><img class="navimg" src="img/virtuemart.svg" width="150px" height="150px" ></a> 
+
+    </div>
+<div class="navbar">
+    <ul class="menu">
+        <li><a href="items.html">Каталог</a>
+            <ul class="submenu">
+                <li><a href="items.html">Мужчины</a></li>
+                <li><a href=#>Женщины</a></li>
+                <li><a href=#>Подростки</a></li>
+            </ul>
+        </li>
+        <li><a href=#>Горячие товары</a>
+            <ul class="submenu">
+                <li><a href=#>Топ сезона</a></li>
+                <li><a href=#>Акционный товар</a></li>
+                <li><a href=#>Лимитная колекция</a></li>
+            </ul>
+        </li>
+        <li><a href=#>Мой кабинет</a>
+            <ul class="submenu">
+                <li><a id="enter">Войти</a></li>
+                <li><a id="log">Регистрация</a></li>
+            </ul>
+        </li>
+            </ul>
+        </li>
+    </ul>
+  </div>
+  <div class="name">
+      <h1>Delivery<br>For<br>You</h1>
+  </div>
+              <!-- Диалоговое окно для регистрации-->  
+  <dialog id="dlog">
+
+    <form method="dialog">
+        <h1>Регистрация</h1>
+        <p>Эл.Почта</p>
+<input type="text" placeholder="Email" required>
+<p>Пароль</p>
+<div class="password">
+	<input type="password" id="password-input" placeholder="Введите пароль" name="password" required>
+	<label><input type="checkbox" class="password-checkbox"> Показать пароль</label>
+</div>
+    <button type="submit" id="aggre">Зарегистрироваться</button>
+    
+    </form>
+    <button class="return" onclick=reload()>Назад</button>
+    </dialog>
+    <script>
+      //показ пароля  
+      $('body').on('click', '.password-checkbox', function(){
+if ($(this).is(':checked')){
+  $('#password-input').attr('type', 'text');
+} else {
+  $('#password-input').attr('type', 'password');
+}
+}); 
+      /*Выводим диалоговое окно*/
+      (function() {
+      
+       let agre =document.getElementById('aggre') //Кнопка подтверждения
+       var opend=document.getElementById('log') //обозначение диалогового окна
+       opend.addEventListener('click', function() {
+     dlog.showModal()
+   })
+   agre.addEventListener('click', function() {
+       dlog.close()
+     
+       
+   })
+   })()
+ </script>
+<!-- Диалоговое окно для входа-->  
+    <dialog id="dialog_enter">
+
+      <form method="dialog">
+          <h1>Вход</h1>
+          <p>Эл.Почта</p>
+  <input type="text" placeholder="Email" required>
+  <p>Пароль</p>
+  <div class="password">
+    <input type="password" id="password-input" placeholder="Введите пароль" name="password" required>
+    <label><input type="checkbox" class="password-checkbox"> Показать пароль</label>
+  </div>
+      <button type="submit" id="aggre">Войти</button>
+      </form>
+      <button class="return" onclick=reload()>Назад</button>
+      </dialog>
+      <script>
+        //показ пароля  
+        $('body').on('click', '.password-checkbox', function(){
+  if ($(this).is(':checked')){
+    $('#password-input').attr('type', 'text');
+  } else {
+    $('#password-input').attr('type', 'password');
+  }
+  }); 
+        /*Выводим диалоговое окно*/
+        (function() {
+        
+         let agre =document.getElementById('aggre') //Кнопка подтверждения
+         var opend=document.getElementById('enter') //обозначение диалогового окна
+         opend.addEventListener('click', function() {
+       dialog_enter.showModal()
+     })
+     agre.addEventListener('click', function() {
+      dialog_enter.close()
+         
+     })
+     })()
+   </script>
+    
+</header>
+<div class="container-fluid">
+    <div class="bag">
+    <a href=""><i class="icofont-basket icofont-8x"></i></a> 
+</div>
+    <h2>В вашей корзине-0 заказов</h2>
+</div>
+
+<div class="container">
+    <h2>Горячие товары</h2>  
+    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+      <!-- Indicators -->
+      <ol class="carousel-indicators">
+        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+        <li data-target="#myCarousel" data-slide-to="1"></li>
+        <li data-target="#myCarousel" data-slide-to="2"></li>
+      </ol>
+      <!-- Wrapper for slides -->
+      <div class="carousel-inner">
+        <div class="item active">
+          <img src="img/570a54b51d3ac154005ae380.png" >
+
+        </div>
+  
+        <div class="item">
+          <img src="img/bayka-tolstovka.png">
+        </div>  
+      
+        <div class="item">
+          <img src="img/pidzhak.png">
+        </div>
+        <div class="item">
+            <img src="img/dress_PNG188.png">
+          </div>
+      </div>
+  
+      <!-- Left and right controls -->
+      <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+  
+      </a>
+      <a class="right carousel-control" href="#myCarousel" data-slide="next">
+
+      </a>
+    </div>
+  </div>
+
+
+<div class="footer">
+
+<div class="tel">
+    <p>Контакты:<br>
+    <p>+38(066)4872862</p>
+    <p>+38(068)2357213</p>
+    <p>+38(099)2325674</p>
+</div>
+<div class="mail">
+    <p>Эл.почта</p>
+   <a href="https://mail.google.com/mail/u/0/#inbox?compose=new"><p>dema2000g@gmail.com</p></a> 
+</div>
+</div>
+  </body>
+</html>
